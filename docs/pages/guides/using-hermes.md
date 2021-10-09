@@ -80,7 +80,7 @@ To use Hermes inspector for JavaScript debugging, we recommend following [the in
 - _This is only supported on a debug build app._
 - _Execute `expo start` and make sure Expo development server is running._
 
-> 💡 [Custom development clients](/clients/introduction.md) built with `expo-dev-client` simplify this process by integrating directly with Hermes inspector.
+> 💡 [Development builds](/development-builds/introduction.md) built with `expo-dev-client` simplify this process by integrating directly with Hermes inspector.
 
 ## Limitations
 
