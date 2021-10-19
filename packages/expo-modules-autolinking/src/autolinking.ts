@@ -160,7 +160,7 @@ function filterToProjectDependencies(results: SearchResults) {
         } else {
           try {
             dependencyPackageJsonPath = projectRequire.resolve(`${dependencyName}/package.json`);
-          } catch (error) {
+          } catch (error: any) {
             // Some packages don't include package.json in its `exports` field,
             // but none of our packages do that, so it seems fine to just ignore that type of error.
             // Related issue: https://github.com/react-native-community/cli/issues/1168
@@ -285,6 +285,7 @@ export async function generatePackageListAsync(
     console.error(
       chalk.red(`Generating package list is not available for platform: ${options.platform}`)
     );
+    throw e;
   }
 }
 
