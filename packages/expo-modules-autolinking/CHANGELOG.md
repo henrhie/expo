@@ -6,6 +6,8 @@
 
 ### 🎉 New features
 
+- Listing module's app delegate subcontractors in the generated `ExpoModulesProvider.swift`. ([#14867](https://github.com/expo/expo/pull/14867) by [@tsapeta](https://github.com/tsapeta))
+
 ### 🐛 Bug fixes
 
 ### 💡 Others
