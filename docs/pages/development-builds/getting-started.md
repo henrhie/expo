@@ -98,7 +98,7 @@ The `expo run` commands will run a new build, install it on to your emulated dev
 
 As you can see, creating a new native build from scratch takes long enough that you'll be tempted to switch tasks and lose your focus.
 
-But now that you have a development build for your project installed on your device, you won't have to wait for the native build process again until you change the underlying native code that powers your app!
+But now that you have a development build of your project installed on your device, you won't have to wait for the native build process again until you change the underlying native code that powers your app!
 
 Instead, all you need to do to start developing is to run:
 
@@ -106,9 +106,9 @@ Instead, all you need to do to start developing is to run:
 
 and scanning the resulting QR code with your system camera or QR code reader (if you want to develop against a physical device)
 
-or pressing the "a" or "i" keys (to open the app in your Android or iPhone emulator respectively).
+or pressing the "a" or "i" keys (to open the app in your Android or iPhone emulator or simulator respectively).
 
-Now make some changes to your app code and see them reflected on your device!
+Now make some changes to your project code and see them reflected on your device!
 
 ### The launcher screen
 

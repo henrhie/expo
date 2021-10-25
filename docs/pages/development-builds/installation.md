@@ -9,7 +9,7 @@ import { Tab, Tabs } from '~/components/plugins/Tabs';
 
 The installation steps on this page are only required to add the `expo-dev-client` library to an **existing** React Native or Bare project.
 
-To initialize a new Bare project or to add a the `expo-dev-client` library to an existing managed project, see our [Getting Started Guide](getting-started.md).
+To initialize a new Bare project or to add a the `expo-dev-client` library to an existing managed project, see our [Getting Started guide](getting-started.md).
 
 If you created your project with `expo init`, or you already have `expo` and/or other Expo modules up and running, use the tabs marked **With Expo modules** (most projects will fall under this category).
 
@@ -87,7 +87,7 @@ Additionally, ensure your project's `minSdkVersion` and Gradle version are at le
 
 ## 2. Basic configuration
 
-To load your project's JavaScript in your development build by scanning a QR code, you'll need to configure a deep link scheme for your app. The fastest way to do this is with the `uri-scheme` package:
+To scan a QR code to load your project's JavaScript in your development build, you'll need to configure a deep link scheme for your app. The fastest way to do this is with the `uri-scheme` package:
 
 <InstallSection packageName="expo-development-client" cmd={["npx uri-scheme add <your scheme>"]} hideBareInstructions />
 
@@ -95,7 +95,7 @@ See the [uri-scheme package](https://www.npmjs.com/package/uri-scheme) for more 
 
 ### 🍏 iOS
 
-Make the following changes to allow the `expo-dev-client` module to control project initialization in the **DEBUG** mode.
+Make the following changes to allow the `expo-dev-client` library to control project initialization in the **DEBUG** mode.
 
 <Tabs tabs={["With Expo modules", "With unimodules", "Without unimodules"]}>
 
@@ -119,7 +119,7 @@ Make the following changes to allow the `expo-dev-client` module to control proj
 
 ### 🤖 Android
 
-Make the following changes to allow the `expo-dev-client` module to control project initialization in the **DEBUG** mode.
+Make the following changes to allow the `expo-dev-client` library to control project initialization in the **DEBUG** mode.
 
 > **Note:** If you have a custom activity in your application already, or just want to understand what the `DevMenuAwareReactActivity` is doing, you can see [advanced instructions for Android here.](https://github.com/expo/expo/tree/master/packages/expo-dev-menu#-android)
 
@@ -165,7 +165,7 @@ import 'expo-dev-client';
 import App from "./App";
 ```
 
-> Note: This will only affect the application in which you make this change. If you are using your development build to load multiple applications, you'll need to add this import statement to each of them.
+> Note: This will only affect the application in which you make this change. If you are using your development build to load multiple projects, you'll need to add this import statement to each of them.
 
 ### Loading published updates
 
