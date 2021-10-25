@@ -44,9 +44,6 @@ public class UpdatesPackage extends BasePackage {
       @Nullable
       @Override
       public ReactInstanceManager createReactInstanceManager(boolean useDeveloperSupport) {
-        if (shouldAutoSetup(context) && !useDeveloperSupport) {
-          UpdatesController.initialize(context);
-        }
         return null;
       }
 
@@ -85,6 +82,17 @@ public class UpdatesPackage extends BasePackage {
           }
         }
         return mShouldAutoSetup;
+      }
+
+      @Override
+      public void onBeforeCreateReactInstanceManager(boolean useDeveloperSupport) {
+        if (shouldAutoSetup(context) && !useDeveloperSupport) {
+          UpdatesController.initialize(context);
+        }
+      }
+
+      @Override
+      public void onDidCreateReactInstanceManager(boolean useDeveloperSupport) {
       }
     };
 
