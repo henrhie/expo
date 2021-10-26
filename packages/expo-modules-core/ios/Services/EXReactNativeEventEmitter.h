@@ -9,4 +9,6 @@
 
 @interface EXReactNativeEventEmitter : RCTEventEmitter <EXInternalModule, EXBridgeModule, EXModuleRegistryConsumer, EXEventEmitterService>
 
+- (void)addSupportedEventNames:(NSArray<NSString *> *)eventNames;
+
 @end

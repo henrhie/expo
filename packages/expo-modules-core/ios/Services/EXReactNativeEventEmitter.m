@@ -10,6 +10,7 @@
 @property (nonatomic, assign) int listenersCount;
 @property (nonatomic, weak) EXModuleRegistry *exModuleRegistry;
 @property (nonatomic, strong) NSMutableDictionary<NSString *, NSNumber *> *modulesListenersCounts;
+@property (nonatomic, strong) NSMutableSet<NSString *> *defaultSupportedEventNames;
 
 @end
 
@@ -20,6 +21,7 @@
   if (self = [super init]) {
     _listenersCount = 0;
     _modulesListenersCounts = [NSMutableDictionary dictionary];
+    _defaultSupportedEventNames = [NSMutableSet set];
   }
   return self;
 }
@@ -41,7 +43,9 @@
 
 - (NSArray<NSString *> *)supportedEvents
 {
-  NSMutableSet<NSString *> *eventsAccumulator = [NSMutableSet set];
+  // Copy the default event names and go through the modules to get more.
+  // In fact, the default ones come from Swift's module registry.
+  NSMutableSet<NSString *> *eventsAccumulator = [_defaultSupportedEventNames copy];
   for (EXExportedModule *exportedModule in [_exModuleRegistry getAllExportedModules]) {
     if ([exportedModule conformsToProtocol:@protocol(EXEventEmitter)]) {
       id<EXEventEmitter> eventEmitter = (id<EXEventEmitter>)exportedModule;
@@ -49,6 +53,11 @@
     }
   }
   return [eventsAccumulator allObjects];
+}
+
+- (void)addSupportedEventNames:(NSArray<NSString *> *)eventNames
+{
+  [_defaultSupportedEventNames addObjectsFromArray:eventNames];
 }
 
 RCT_EXPORT_METHOD(addProxiedListener:(NSString *)moduleName eventName:(NSString *)eventName)

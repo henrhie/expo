@@ -91,4 +91,14 @@ public class SwiftInteropBridge: NSObject {
       }
     }
   }
+
+  /**
+   Returns an array of event names supported by all Swift modules.
+   */
+  @objc
+  public func getSupportedEvents() -> [String] {
+    return registry.reduce(into: [String]()) { events, holder in
+      events.append(contentsOf: holder.definition.eventNames)
+    }
+  }
 }

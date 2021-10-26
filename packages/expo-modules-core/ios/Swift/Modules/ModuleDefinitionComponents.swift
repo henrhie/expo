@@ -286,4 +286,27 @@ extension AnyModule {
   public static func prop<ViewType: UIView, PropType>(_ name: String, _ setter: @escaping (ViewType, PropType) -> Void) -> AnyDefinition {
     return ConcreteViewProp(name, setter)
   }
+
+  /**
+   Defines event names that this module can send to JavaScript.
+   */
+  public static func events(_ names: String...) -> AnyDefinition {
+    return EventsDefinition(names: names)
+  }
+
+  public static func event(_ name: String) -> EventDefinition {
+    return EventDefinition(name: name, definitions: [])
+  }
+
+  public static func event(_ name: String, @EventDefinitionBuilder _ body: @escaping () -> [AnyDefinition]) -> EventDefinition {
+    return EventDefinition(name: name, definitions: body())
+  }
+
+  public static func startObserving(_ body: @escaping () -> AnyMethod) -> AnyMethod {
+    return ConcreteMethod("startObserving", argTypes: [], body)
+  }
+
+  public static func stopObserving(_ body: @escaping () -> AnyMethod) -> AnyMethod {
+    return ConcreteMethod("stopObserving", argTypes: [], body)
+  }
 }
