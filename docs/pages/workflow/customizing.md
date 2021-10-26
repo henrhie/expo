@@ -39,7 +39,7 @@ If you've decided that you want to roll your app back to being fully managed (no
 
 ## Developing apps with custom native code
 
-Once you have customized the native code in your project, you can use the [`expo-dev-client`](/development-builds/introduction.md) package to create a development build and retain the convenience of working with just JavaScript and/or TypeScript in Expo Go. You can create a development build for your managed or bare workflow by following [our guide](/development-builds/getting-started.md).
+Once you have customized the native code in your project, you can use the [`expo-dev-client`](/development/introduction.md) package to create a development build and retain the convenience of working with just JavaScript and/or TypeScript in Expo Go. You can create a development build for your managed or bare workflow by following [our guide](/development/getting-started.md).
 
 ## Releasing apps with custom native code to production
 

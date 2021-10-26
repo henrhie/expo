@@ -141,7 +141,7 @@ Make the following changes to allow the `expo-dev-client` library to control pro
 
 ## 3. Optional configuration
 
-There are a few more changes you can make to get the best experience, but you [can skip ahead to building](/development-builds/getting-started/#building-and-installing-your-first-development-build) if you prefer.
+There are a few more changes you can make to get the best experience, but you [can skip ahead to building](/development/getting-started/#building-and-installing-your-first-development-build) if you prefer.
 
 ### Enable development with Expo CLI
 
@@ -181,4 +181,4 @@ Development builds can also open and preview published updates to your app. To a
 
 ## 4. Build and Install
 
-You're now ready to [build your first development build](/development-builds/getting-started.md#building-and-installing-your-first-development-build).
+You're now ready to [build your first development build](/development/getting-started.md#building-and-installing-your-first-development-build).

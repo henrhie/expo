@@ -34,7 +34,7 @@ const DIR_MAPPING = {
   submit: 'EAS Submit',
   'technical-specs': 'Technical Specs',
   accounts: 'Expo Accounts',
-  'development-builds': 'Development Builds',
+  development: 'Development Builds',
   archived: 'Archived',
   faq: 'FAQ',
   troubleshooting: 'Troubleshooting',
@@ -146,9 +146,9 @@ if (isEasInFeaturePreview) {
 }
 
 if (isDevClientInFeaturePreview) {
-  featurePreviewDirectories = [...featurePreviewDirectories, 'development-builds'];
+  featurePreviewDirectories = [...featurePreviewDirectories, 'development'];
 } else {
-  previewDirectories = [...previewDirectories, 'development-builds'];
+  previewDirectories = [...previewDirectories, 'development'];
 }
 
 // Find any directories that aren't reference or starting directories. Also exclude the api

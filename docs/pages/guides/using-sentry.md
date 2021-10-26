@@ -146,7 +146,7 @@ With `expo-updates`, release builds of both iOS and Android apps will create and
 
 - Your `release` will automatically be set to Sentry's expected value- `${bundleIdentifier}@${version}+${buildNumber}` (iOS) or `${androidPackage}@${version}+${versionCode}` (Android).
 - Your `dist` will automatically be set to Sentry's expected value- `${buildNumber}` (iOS) or `${versionCode}` (Android).
-- The configuration for build time sourcemaps comes from the `ios/sentry.properties` and `android/sentry.properties` files. For more information, refer to [Sentry's documentation](https://docs.sentry.io/development-builds/java/config/#configuration-via-properties-file).
+- The configuration for build time sourcemaps comes from the `ios/sentry.properties` and `android/sentry.properties` files. For more information, refer to [Sentry's documentation](https://docs.sentry.io/development/java/config/#configuration-via-properties-file).
 
 > Please note that configuration for `expo publish` and `expo export` is still done via `app.json`.
 
